@@ -2,29 +2,30 @@ import React from "react";
 
 const Nav = () => {
   return (
-    <div className="flex items-center justify-between px-[96px] py-[12px] relative">
-      <div className="relative w-fit [font-family:'Roboto-Bold',Helvetica] font-bold text-black text-[24px] tracking-[0] leading-[normal]">
-        JULIAN HOUSTON
-      </div>
-      <div className="relative w-[561.6px] h-[40px]">
-        <div className="absolute w-[168px] h-[40px] top-0 left-[394px] rounded-[5px] border border-solid border-black">
-          <div className="absolute w-[135px] h-[25px] top-[7px] left-[16px] [font-family:'Roboto-Regular',Helvetica] font-normal text-black text-[18px] text-center tracking-[0] leading-[24.3px]">
+    <div className="flex pt-[12px] pr-[96px] pb-[12px] pl-[96px] justify-between items-center self-stretch shrink-0 flex-nowrap relative">
+      <span className="h-[29px] shrink-0 basis-auto font-['Roboto'] text-[24px] font-bold leading-[28.125px] text-[#000] relative text-left uppercase whitespace-nowrap z-[1]">
+        Julian Houston
+      </span>
+      <div className="w-[561.6px] h-[40px] shrink-0 relative z-[2]">
+        <button className="w-[29.91%] h-full text-[0px] border-none absolute top-0 left-[70.09%] z-[3] pointer">
+          <span className="flex w-[135px] h-[25px] justify-center items-center font-['Roboto'] text-[18px] font-normal leading-[24.258px] text-[#000] relative text-center whitespace-nowrap z-[5] mt-[8px] mr-0 mb-0 ml-[17px]">
             Contact
-          </div>
-        </div>
-        <div className="absolute w-[366px] h-[22px] top-[9px] left-0">
-          <div className="absolute w-[58px] h-[22px] top-0 left-0 [font-family:'Roboto-Regular',Helvetica] font-normal text-black text-[18px] tracking-[0] leading-[normal]">
+          </span>
+          <div className="w-full h-full rounded-[5px] border-solid border border-[#000] absolute top-0 left-0 z-[4]" />
+        </button>
+        <div className="w-[357.6px] h-[22px] absolute top-[9px] left-0 z-[6]">
+          <span className="flex h-full justify-start items-center font-['Roboto'] text-[18px] font-normal leading-[21.094px] text-[#000] absolute top-0 left-0 text-left whitespace-nowrap z-[7]">
             Home
-          </div>
-          <div className="w-[58px] left-[96px] absolute h-[22px] top-0 [font-family:'Roboto-Regular',Helvetica] font-normal text-black text-[18px] tracking-[0] leading-[normal]">
+          </span>
+          <span className="flex h-full justify-start items-center font-['Roboto'] text-[18px] font-normal leading-[21.094px] text-[#000] absolute top-0 left-[26.85%] text-left whitespace-nowrap z-[8]">
             About
-          </div>
-          <div className="w-[70px] left-[186px] absolute h-[22px] top-0 [font-family:'Roboto-Regular',Helvetica] font-normal text-black text-[18px] tracking-[0] leading-[normal]">
+          </span>
+          <span className="flex h-full justify-start items-center font-['Roboto'] text-[18px] font-normal leading-[21.094px] text-[#000] absolute top-0 left-[51.9%] text-left whitespace-nowrap z-[9]">
             Resume
-          </div>
-          <div className="w-[70px] left-[288px] absolute h-[22px] top-0 [font-family:'Roboto-Regular',Helvetica] font-normal text-black text-[18px] tracking-[0] leading-[normal]">
+          </span>
+          <span className="flex h-full justify-start items-center font-['Roboto'] text-[18px] font-normal leading-[21.094px] text-[#000] absolute top-0 left-[80.43%] text-left whitespace-nowrap z-10">
             Projects
-          </div>
+          </span>
         </div>
       </div>
     </div>
