@@ -20,12 +20,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
-
-<div>
-
-
-
-  
-  
- 
-</div>;

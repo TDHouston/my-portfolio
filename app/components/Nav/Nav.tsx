@@ -1,34 +1,106 @@
-import React from "react";
+"use client";
+import Link from "next/link";
+import React, { useState } from "react";
 
 const Nav = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  function getMenuClasses() {
+    let menuClasses = [];
+
+    if (isOpen) {
+      menuClasses = [
+        "flex",
+        "absolute",
+        "top-[60px]",
+        "bg-gray-800",
+        "w-full",
+        "p-4",
+        "left-0",
+        "gap-10",
+        "flex-col",
+      ];
+    } else {
+      menuClasses = ["hidden", "md:flex"];
+    }
+
+    return menuClasses.join(" ");
+  }
+
   return (
-    <div className="flex pt-[12px] pr-[96px] pb-[12px] pl-[96px] justify-between items-center self-stretch shrink-0 flex-nowrap relative">
-      <span className="h-[29px] shrink-0 basis-auto font-['Roboto'] text-[24px] font-bold leading-[28.125px] text-[#000] relative text-left uppercase whitespace-nowrap z-[1]">
-        Julian Houston
-      </span>
-      <div className="w-[561.6px] h-[40px] shrink-0 relative z-[2]">
-        <button className="w-[29.91%] h-full text-[0px] border-none absolute top-0 left-[70.09%] z-[3] pointer">
-          <span className="flex w-[135px] h-[25px] justify-center items-center font-['Roboto'] text-[18px] font-normal leading-[24.258px] text-[#000] relative text-center whitespace-nowrap z-[5] mt-[8px] mr-0 mb-0 ml-[17px]">
-            Contact
-          </span>
-          <div className="w-full h-full rounded-[5px] border-solid border border-[#000] absolute top-0 left-0 z-[4]" />
-        </button>
-        <div className="w-[357.6px] h-[22px] absolute top-[9px] left-0 z-[6]">
-          <span className="flex h-full justify-start items-center font-['Roboto'] text-[18px] font-normal leading-[21.094px] text-[#000] absolute top-0 left-0 text-left whitespace-nowrap z-[7]">
+    <nav className=" text-black p-4 sm:p-6 md:flex md:justify-between md:items-center">
+      <div className="container mx-auto flex justify-between items-center">
+        <a href="" className="text-2xl font-bold">
+          Julian Houston
+        </a>
+        <div className={getMenuClasses()}>
+          <Link href="/" className="mx-2 hover:text-gray-300 flex items-center">
             Home
-          </span>
-          <span className="flex h-full justify-start items-center font-['Roboto'] text-[18px] font-normal leading-[21.094px] text-[#000] absolute top-0 left-[26.85%] text-left whitespace-nowrap z-[8]">
+          </Link>
+          <Link
+            href="/about"
+            className="mx-2 hover:text-gray-300 flex items-center"
+          >
             About
-          </span>
-          <span className="flex h-full justify-start items-center font-['Roboto'] text-[18px] font-normal leading-[21.094px] text-[#000] absolute top-0 left-[51.9%] text-left whitespace-nowrap z-[9]">
+          </Link>
+          <Link
+            href="/resume"
+            className="mx-2 hover:text-gray-300 flex items-center"
+          >
             Resume
-          </span>
-          <span className="flex h-full justify-start items-center font-['Roboto'] text-[18px] font-normal leading-[21.094px] text-[#000] absolute top-0 left-[80.43%] text-left whitespace-nowrap z-10">
+          </Link>
+          <Link
+            href="/projects"
+            className="mx-2 hover:text-gray-300 flex items-center"
+          >
             Projects
-          </span>
+          </Link>
+          <Link
+            href="/contact"
+            className="mx-2 hover:text-gray-300 flex items-center justify-center"
+          >
+            <button
+              type="button"
+              className="text-white flex items-center justify-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+            >
+              Contact
+            </button>
+          </Link>
+        </div>
+
+        <div className="md:hidden flex items-center">
+          <button
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {isOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              )}
+            </svg>
+          </button>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 export default Nav;
