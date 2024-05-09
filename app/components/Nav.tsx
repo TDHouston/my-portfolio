@@ -1,36 +1,29 @@
-"use client";
+'use client'
 import Link from "next/link";
 import React, { useState } from "react";
+import ContactModal from "./ContactModal"; // Adjust the path to where your ContactModal is located
 
 const Nav = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); // State for mobile menu toggle
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false); // State for contact modal visibility
 
   function getMenuClasses() {
-    let menuClasses = [];
-
     if (isOpen) {
-      menuClasses = [
-        "flex",
-        "absolute",
-        "top-[60px]",
-        "bg-gray-800",
-        "w-full",
-        "p-4",
-        "left-0",
-        "gap-10",
-        "flex-col",
-      ];
+      return "flex absolute top-[60px] bg-gray-800 w-full p-4 left-0 gap-10 flex-col";
     } else {
-      menuClasses = ["hidden", "md:flex"];
+      return "hidden md:flex";
     }
-
-    return menuClasses.join(" ");
   }
 
+  // Toggle contact modal visibility
+  const toggleContactModal = () => {
+    setIsContactModalOpen(!isContactModalOpen);
+  };
+
   return (
-    <nav className=" text-black p-4 sm:p-6 md:flex md:justify-between md:items-center">
+    <nav className="text-black p-4 sm:p-6 md:flex md:justify-between md:items-center">
       <div className="container mx-auto flex justify-between items-center">
-        <a href="" className="text-2xl font-bold">
+        <a href="/" className="text-2xl font-bold">
           Julian Houston
         </a>
         <div className={getMenuClasses()}>
@@ -43,37 +36,24 @@ const Nav = () => {
           >
             About
           </Link>
-          <Link
-            href="/resume"
-            className="mx-2 hover:text-gray-300 flex items-center"
-          >
-            Resume
-          </Link>
+          {/* <Link href="/resume" className="mx-2 hover:text-gray-300 flex items-center">Resume</Link> */}
           <Link
             href="/projects"
             className="mx-2 hover:text-gray-300 flex items-center"
           >
             Projects
           </Link>
-          <Link
-            href="/contact"
-            className="mx-2 hover:text-gray-300 flex items-center justify-center"
+          <button
+            type="button"
+            className="mx-2 hover:text-gray-300 flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+            onClick={toggleContactModal}
           >
-            <button
-              type="button"
-              className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
-              >
-              Contact
-            </button>
-          </Link>
+            Contact
+          </button>
         </div>
 
         <div className="md:hidden flex items-center">
-          <button
-            onClick={() => {
-              setIsOpen(!isOpen);
-            }}
-          >
+          <button onClick={() => setIsOpen(!isOpen)}>
             <svg
               className="w-6 h-6"
               fill="none"
@@ -100,7 +80,11 @@ const Nav = () => {
           </button>
         </div>
       </div>
+
+      {/* Contact Modal Component */}
+      <ContactModal isOpen={isContactModalOpen} onClose={toggleContactModal} />
     </nav>
   );
 };
+
 export default Nav;
