@@ -1,34 +1,32 @@
+import Image from "next/image";
 import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="flex pt-[48px] pr-[96px] pb-[48px] pl-[96px] justify-between items-center self-stretch shrink-0 flex-nowrap relative z-[11]">
-      <div className="flex w-[756px] flex-col gap-[16px] items-start shrink-0 flex-nowrap relative z-[12]">
-        <span className="flex w-[756px] h-[300px] justify-start items-center self-stretch shrink-0 font-['Roboto'] text-[64px] font-normal leading-[75px] text-[#000] relative text-left z-[13]">
-          My name is Julian Houston and I am Software Engineer living in
-          Brooklyn, NY.
-        </span>
-        <span className="flex w-[756px] h-[132px] justify-start items-center self-stretch shrink-0 font-['Roboto'] text-[28px] font-normal leading-[32.813px] text-[#000] relative text-left z-[14]">
-          I am a Full-Stack Developer specializing in immersive web and XR
-          experiences. I'm dedicated to transforming digital concepts into
-          engaging realities, with a portfolio that spans robust web
-          architectures and dynamic 3D animations.
-        </span>
-      </div>
-      <div className="flex w-[626px] flex-col gap-[16px] items-start shrink-0 flex-nowrap relative z-[15]">
-        <div className="w-[626px] h-[626px] shrink-0 bg-[#000] rounded-[8px] relative z-[16]" />
-        <div className="flex flex-col gap-[8px] items-start self-stretch shrink-0 flex-nowrap opacity-80 relative z-[17]">
-          <span className="flex w-[390px] h-[30px] justify-center items-center shrink-0 basis-auto font-['Roboto'] text-[26px] font-black leading-[30px] text-[#000] relative text-center uppercase whitespace-nowrap z-[18]">
-            Companies I’ve Worked with
-          </span>
-          <div className="flex w-[390px] gap-[15px] items-center shrink-0 flex-nowrap relative z-[19]">
-            <div className="w-[120px] h-[42.5px] shrink-0 bg-[#000] relative z-20" />
-            <div className="w-[120px] h-[42.5px] shrink-0 bg-[#000] relative z-[21]" />
-            <div className="w-[120px] h-[42.5px] shrink-0 bg-[#000] relative z-[22]" />
-          </div>
+    <section className="bg-white dark:bg-gray-900">
+      <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+        <div className="mr-auto place-self-center lg:col-span-7">
+          <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-5xl dark:text-white">
+            My name is Julian Houston and I am Software Engineer living in
+            Brooklyn, NY.
+          </h1>
+          <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+            I am a Full-Stack Developer specializing in immersive web and XR
+            experiences. I'm dedicated to transforming digital concepts into
+            engaging realities, with a portfolio that spans robust web
+            architectures and dynamic 3D animations.
+          </p>
+        </div>
+        <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
+          <Image
+            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
+            alt="mockup"
+            width={626}
+            height={626}
+          />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
