@@ -13,6 +13,15 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        primary: {
+          600: '#4f46e5', // Define your primary-600 color
+          700: '#4338ca', // Define your primary-700 color
+          800: '#3730a3', // Define your primary-800 color
+          300: '#cbd5e1', // Define your primary-300 color
+          900: '#312e81', // Define your primary-900 color for dark focus ring
+        },
+      },
     },
     screens: {
       'sm': '640px',
