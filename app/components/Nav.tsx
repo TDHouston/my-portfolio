@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Link from "next/link";
 import React, { useState } from "react";
 import ContactModal from "./ContactModal"; // Adjust the path to where your ContactModal is located
@@ -9,7 +9,7 @@ const Nav = () => {
 
   function getMenuClasses() {
     if (isOpen) {
-      return "flex absolute top-[60px] bg-gray-800 w-full p-4 left-0 gap-10 flex-col";
+      return "flex absolute top-[60px] bg-white w-full p-4 left-0 gap-10 flex-col";
     } else {
       return "hidden md:flex";
     }
@@ -30,12 +30,7 @@ const Nav = () => {
           <Link href="/" className="mx-2 hover:text-gray-300 flex items-center">
             Home
           </Link>
-          <Link
-            href="/about"
-            className="mx-2 hover:text-gray-300 flex items-center"
-          >
-            About
-          </Link>
+          {/* <Link href="/about" className="mx-2 hover:text-gray-300 flex items-center">About</Link> */}
           {/* <Link href="/resume" className="mx-2 hover:text-gray-300 flex items-center">Resume</Link> */}
           <Link
             href="/projects"
@@ -45,7 +40,7 @@ const Nav = () => {
           </Link>
           <button
             type="button"
-            className="mx-2 hover:text-gray-300 flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+            className="mx-2 hover:text-gray-300 flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
             onClick={toggleContactModal}
           >
             Contact
