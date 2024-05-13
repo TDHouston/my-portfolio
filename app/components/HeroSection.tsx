@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <section className="bg-white lg:my-6 mx-auto">
       <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:flex-col lg:justify-center lg:items-center text-center lg:text-left">
-        <div className="mr-auto place-self-center lg:col-span-4 lg:p-8">
+        <div className="mr-auto place-self-center lg:col-span-4 lg:py-8 lg:pr-8">
           <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-5xl text-gray-900">
             My name is Julian Houston and I am a Software Engineer living in
             Brooklyn, NY.

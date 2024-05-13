@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -25,18 +26,33 @@ const Projects = () => {
               Full Stack Java Engineer
             </span>
             <h3 className="text-2xl font-bold leading-tight text-gray-900">
-              Capstone Project
+              Tech Chefs | Capstone Project
             </h3>
+            <Image
+              className="mx-auto"
+              src="/techchefs.png"
+              alt=""
+              width={600}
+              height={0}
+            />
             <p className="text-lg font-normal text-gray-500 dark:text-gray-400">
-              Tech Chefs: Crafting Culinary Masterpieces Made Easy with Recipes,
-              Customization, and Shopping in One Platform
+              Tech Chefs is a recipe customization app that allows users to
+              create, post, and share recipes online, and then generate a
+              shopping list based on the recipes they select or create. This app
+              was developed in five days by a team of three as part of a
+              capstone project.
+            </p>
+            <p className="text-sm font-extrabold">
+              Technologies: Java, Javascript, HTML/CSS, SQL, Bootstrap, Node.js,
+              React, Spring Maven, JUnit, JWT
             </p>
             <Link
-              href="/projects/capstone"
+              href="https://github.com/Tech-Chefs/TechChefsCapstone"
               className="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
               role="button"
+              target="_blank"
             >
-              View case study
+              View Code
               <svg
                 aria-hidden="true"
                 className="w-5 h-5 ml-2 -mr-1"
@@ -60,16 +76,46 @@ const Projects = () => {
             <h3 className="text-2xl font-bold leading-tight text-gray-900">
               WebGL Portfolio
             </h3>
+            <video src="/webglClip.mov" autoPlay loop playsInline muted/>
             <p className="text-lg font-normal text-gray-500 dark:text-gray-400">
-              My Comprehensive Portfolio of 3D Modeling, Immersive AR, and
-              Captivating VR Projects
+              This immersive portfolio prototype is a gateway to 3D, AR, VR, and
+              MR, documenting my journey with cutting-edge technologies and
+              immersive experiences. The ultimate goal is to gamify the
+              portfolio, creating an interactive journey that captivates and
+              inspires.
+            </p>
+            <p className="text-sm font-extrabold">
+              Technologies: Javascript, Three.js, HTML/CSS, Blender, Node.js,
+              React, Vite, Vercel
             </p>
             <Link
-              href="/projects/webgl"
-              className="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+              href="https://www.juhous.com/"
+              className="text-white mr-2 bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 "
               role="button"
+              target="_blank"
             >
-              View case study
+              Try Demo
+              <svg
+                aria-hidden="true"
+                className="w-5 h-5 ml-2 -mr-1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3 a1 1 0 110-2h11.586l-2.293-2.293 a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </Link>
+            <Link
+              href="https://github.com/TDHouston/exhibitsArchive"
+              className="text-white ml-2 bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+              role="button"
+              target="_blank"
+            >
+              View Code
               <svg
                 aria-hidden="true"
                 className="w-5 h-5 ml-2 -mr-1"

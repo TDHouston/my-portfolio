@@ -16,7 +16,7 @@ export function Model(props: ModelProps) {
   const guiRef = useRef<GUI | null>(null);
 
   useEffect(() => {
-    const gui = new GUI({ autoPlace: false });
+    const gui = new GUI({ autoPlace: false});
     guiRef.current = gui;
     document.body.appendChild(gui.domElement);
 
@@ -35,7 +35,7 @@ export function Model(props: ModelProps) {
 
     gui.domElement.style.position = "absolute";
     gui.domElement.style.top = "190px";
-    gui.domElement.style.right = "80px";
+    gui.domElement.style.right = "275px";
 
     return () => {
       if (gui) {
