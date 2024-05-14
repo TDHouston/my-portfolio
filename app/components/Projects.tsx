@@ -76,7 +76,7 @@ const Projects = () => {
             <h3 className="text-2xl font-bold leading-tight text-gray-900">
               WebGL Portfolio
             </h3>
-            <video src="/webglClip.mov" autoPlay loop playsInline muted/>
+            <video src="/webglClip.mov" autoPlay loop playsInline muted />
             <p className="text-lg font-normal text-gray-500 dark:text-gray-400">
               This immersive portfolio prototype is a gateway to 3D, AR, VR, and
               MR, documenting my journey with cutting-edge technologies and
